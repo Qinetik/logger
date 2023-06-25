@@ -1,6 +1,8 @@
 package com.wakaztahir.qawazlogger
 
-expect object QPlatformLogger : Logger
+expect object QPlatformLogger : Logger {
+    var isLoggingEnabled : Boolean
+}
 
 fun Throwable.logIt(
     message: String = "EXCEPTION",

@@ -2,6 +2,8 @@ package com.wakaztahir.qawazlogger
 
 actual object QPlatformLogger : Logger {
 
+    actual var isLoggingEnabled: Boolean = true
+
     private const val ANSI_RESET = "\u001B[0m"
     private const val ANSI_BLACK = "\u001B[30m"
     private const val ANSI_RED = "\u001B[31m"
@@ -13,9 +15,11 @@ actual object QPlatformLogger : Logger {
     private const val ANSI_WHITE = "\u001B[37m"
 
     private fun log(color: String, type: LogType, tag: String, message: String, exception: Throwable?) {
-        println("$color[${type.name}] $tag:$message$ANSI_RESET")
-        exception?.also { exc ->
-            println("$color[${type.name}] ${exc.stackTraceToString()}$ANSI_RESET")
+        if (isLoggingEnabled) {
+            println("$color[${type.name}] $tag:$message$ANSI_RESET")
+            exception?.also { exc ->
+                println("$color[${type.name}] ${exc.stackTraceToString()}$ANSI_RESET")
+            }
         }
     }
 
