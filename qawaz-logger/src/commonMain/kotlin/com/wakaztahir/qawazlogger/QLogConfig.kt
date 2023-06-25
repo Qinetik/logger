@@ -1,6 +1,9 @@
 package com.wakaztahir.qawazlogger
 
-object QLogConfig {
+abstract class QLogConfig {
+
+    @Suppress("MemberVisibilityCanBePrivate")
+    var isInterceptorsEnabled: Boolean = true
 
     private val interceptors = mutableListOf<LogInterceptor>()
 
@@ -10,9 +13,11 @@ object QLogConfig {
     }
 
     internal fun intercept(type: LogType, tag: String, message: String, exception: Throwable?) {
-        if (interceptors.isEmpty()) return
-        for (interceptor in interceptors) {
-            interceptor.intercept(type, tag, message, exception)
+        if (isInterceptorsEnabled) {
+            if (interceptors.isEmpty()) return
+            for (interceptor in interceptors) {
+                interceptor.intercept(type, tag, message, exception)
+            }
         }
     }
 
