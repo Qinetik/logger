@@ -8,19 +8,19 @@ group = "com.wakaztahir"
 version = findProperty("version") as String
 
 kotlin {
-    android {
+    androidTarget {
         publishLibraryVariants("release")
     }
     jvm("desktop") {
         compilations.all {
-            kotlinOptions.jvmTarget = "11"
+            kotlinOptions.jvmTarget = "1.8"
         }
     }
     js(IR) {
         browser()
         binaries.executable()
     }
-    val ktorVersion = "2.2.3"
+//    val ktorVersion = "2.2.3"
     sourceSets {
         val commonMain by getting {
             dependencies {
@@ -55,15 +55,16 @@ kotlin {
 }
 
 android {
-    compileSdk = 32
+    namespace = "com.wakaztahir.qawazlogger"
+    compileSdk = 33
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
     defaultConfig {
         minSdk = 21
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 }
 
