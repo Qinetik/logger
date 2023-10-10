@@ -1,6 +1,6 @@
 package com.wakaztahir.common
 
-import com.wakaztahir.qawazlogger.LogType
+import org.qinetik.logger.LogType
 import com.wakaztahir.qawazlogger.logIt
 
 

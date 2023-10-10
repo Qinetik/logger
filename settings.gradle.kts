@@ -16,10 +16,10 @@ pluginManagement {
         kotlin("plugin.serialization").version(extra["kotlin.version"] as String).apply(false)
     }
 }
-rootProject.name = "QawazLogger"
+rootProject.name = "QinetikLogger"
 
 include(":demo:android")
 include(":demo:desktop")
 include(":demo:common")
 include(":demo:web")
-include(":qawaz-logger")
+include(":logger")

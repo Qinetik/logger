@@ -17,7 +17,7 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
-                implementation(project(":qawaz-logger"))
+                implementation(project(":logger"))
             }
         }
         val commonTest by getting {
