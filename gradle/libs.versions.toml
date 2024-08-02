@@ -12,6 +12,7 @@ ktor = "2.3.12"
 coroutines = "1.8.0"
 billingVersion = "7.0.0"
 settings = "1.0.0"
+playReview = "2.0.1"
 
 [libraries]
 # Moko Resources
@@ -29,6 +30,7 @@ ktor-client-content-negotiation = { group = "io.ktor", name = "ktor-client-conte
 ktor-serialization-json = { group = "io.ktor", name = "ktor-serialization-kotlinx-json", version.ref = "ktor" }
 ktor-client-auth = { group = "io.ktor", name = "ktor-client-auth", version.ref = "ktor" }
 ktor-client-okhttp = { group = "io.ktor", name = "ktor-client-okhttp", version.ref = "ktor" }
+ktor-client-java = { group = "io.ktor", name = "ktor-client-java", version.ref = "ktor" }
 # Activity Compose
 activity-compose = { group = "androidx.activity", name = "activity-compose", version = "1.9.1" }
 # Coil Compose
@@ -42,6 +44,8 @@ googleapi-client-android = { group = "com.google.api-client", name = "google-api
 # Google Play Services
 play-services-ads = { module = "com.google.android.gms:play-services-ads", version = "23.2.0" }
 play-services-auth = { group = "com.google.android.gms", name="play-services-auth", version = "21.2.0" }
+play-review = { module = "com.google.android.play:review", version.ref = "playReview" }
+play-review-ktx = { module = "com.google.android.play:review-ktx", version.ref = "playReview" }
 # Multiplatform Settings
 settings = { group = "com.russhwolf", name = "multiplatform-settings", version.ref = "settings" }
 settings-noarg = { group = "com.russhwolf", name = "multiplatform-settings-no-arg", version.ref = "settings" }
@@ -51,14 +55,17 @@ qrose = { group = "io.github.alexzhirkevich", name = "qrose", version = "1.0.0-b
 qinetik-ads = { group = "org.qinetik", name = "ads", version = "1.0.23" }
 qinetik-billing = { group = "org.qinetik", name = "billing", version = "1.0.13" }
 qinetik-logger = { group = "org.qinetik", name = "logger", version = "1.0.18" }
-qinetik-rating = { group = "org.qinetik", name = "rating", version = "1.0.6" }
-qinetik-reporter = { group = "org.qinetik", name = "reporter", version = "1.0.16" }
+qinetik-rating = { group = "org.qinetik", name = "rating", version = "1.0.7" }
+qinetik-reporter = { group = "org.qinetik", name = "reporter", version = "1.0.17" }
 qinetik-tickets = { group = "org.qinetik", name = "tickets", version = "1.0.7" }
-qinetik-sync = { group = "org.qinetik", name = "sync", version = "1.0.9" }
+qinetik-sync = { group = "org.qinetik", name = "sync", version = "1.0.10" }
 # Self
 compose-material-icons = { group = "com.wakaztahir.compose-icons", name = "materialdesignicons", version = "1.0.1" }
 compose-helpers = { group = "com.wakaztahir", name = "compose-helpers", version = "1.0.14" }
 # Others
+android-test-core = { module = "androidx.test:core", version = "1.5.0" }
+core-ktx = { module = "androidx.test:core-ktx", version = "1.6.1" }
+runner = { module = "androidx.test:runner", version = "1.6.1" }
 recaptcha = { module = "com.google.android.recaptcha:recaptcha", version = "18.5.1" }
 startup-runtime = { module = "androidx.startup:startup-runtime", version = "1.1.1" }
 google-cloud-recaptchaenterprise = { module = "com.google.cloud:google-cloud-recaptchaenterprise", version = "3.20.0" }
