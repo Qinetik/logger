@@ -1,0 +1,84 @@
+[versions]
+minSdk = "21"
+compileSdk = "35"
+targetSdk = "35"
+kotlin = "1.9.24"
+androidGradlePlugin = "8.2.0"
+compose = "1.6.11"
+moko-resources = "0.23.0"
+chrynan-navigation = "0.10.0"
+serialization = "1.6.2"
+ktor = "2.3.12"
+coroutines = "1.8.0"
+billingVersion = "7.0.0"
+settings = "1.0.0"
+
+[libraries]
+# Moko Resources
+moko-resources-core = { group = "dev.icerock.moko", name = "resources", version.ref = "moko-resources" }
+moko-resources-compose = { group = "dev.icerock.moko", name = "resources-compose", version.ref = "moko-resources" }
+# Navigation
+navigation-core = { group = "com.chrynan.navigation", name = "navigation-core", version.ref = "chrynan-navigation" }
+navigation-compose = { group = "com.chrynan.navigation", name = "navigation-compose", version.ref = "chrynan-navigation" }
+# Serialization
+serialization-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-core", version.ref = "serialization" }
+serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "serialization" }
+# Ktor
+ktor-client-core = { group = "io.ktor", name = "ktor-client-core", version.ref = "ktor" }
+ktor-client-content-negotiation = { group = "io.ktor", name = "ktor-client-content-negotiation", version.ref = "ktor" }
+ktor-serialization-json = { group = "io.ktor", name = "ktor-serialization-kotlinx-json", version.ref = "ktor" }
+ktor-client-auth = { group = "io.ktor", name = "ktor-client-auth", version.ref = "ktor" }
+ktor-client-okhttp = { group = "io.ktor", name = "ktor-client-okhttp", version.ref = "ktor" }
+# Activity Compose
+activity-compose = { group = "androidx.activity", name = "activity-compose", version = "1.9.1" }
+# Coil Compose
+coil-compose = { group = "io.coil-kt", name = "coil-compose", version = "2.3.0" }
+# Coroutines
+coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
+coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
+coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutines" }
+# Google Api
+googleapi-client-android = { group = "com.google.api-client", name = "google-api-client-android", version = "2.0.0" }
+# Google Play Services
+play-services-ads = { module = "com.google.android.gms:play-services-ads", version = "23.2.0" }
+play-services-auth = { group = "com.google.android.gms", name="play-services-auth", version = "21.2.0" }
+# Multiplatform Settings
+settings = { group = "com.russhwolf", name = "multiplatform-settings", version.ref = "settings" }
+settings-noarg = { group = "com.russhwolf", name = "multiplatform-settings-no-arg", version.ref = "settings" }
+# QR Codegeneration library
+qrose = { group = "io.github.alexzhirkevich", name = "qrose", version = "1.0.0-beta02" }
+# Qinetik
+qinetik-ads = { group = "org.qinetik", name = "ads", version = "1.0.23" }
+qinetik-billing = { group = "org.qinetik", name = "billing", version = "1.0.13" }
+qinetik-logger = { group = "org.qinetik", name = "logger", version = "1.0.18" }
+qinetik-rating = { group = "org.qinetik", name = "rating", version = "1.0.6" }
+qinetik-reporter = { group = "org.qinetik", name = "reporter", version = "1.0.16" }
+qinetik-tickets = { group = "org.qinetik", name = "tickets", version = "1.0.7" }
+qinetik-sync = { group = "org.qinetik", name = "sync", version = "1.0.9" }
+# Self
+compose-material-icons = { group = "com.wakaztahir.compose-icons", name = "materialdesignicons", version = "1.0.1" }
+compose-helpers = { group = "com.wakaztahir", name = "compose-helpers", version = "1.0.14" }
+# Others
+recaptcha = { module = "com.google.android.recaptcha:recaptcha", version = "18.5.1" }
+startup-runtime = { module = "androidx.startup:startup-runtime", version = "1.1.1" }
+google-cloud-recaptchaenterprise = { module = "com.google.cloud:google-cloud-recaptchaenterprise", version = "3.20.0" }
+lifecycle-runtime-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version = "2.8.4" }
+activity-ktx = { module = "androidx.activity:activity-ktx", version = "1.9.1" }
+billing = { module = "com.android.billingclient:billing", version.ref = "billingVersion" }
+billing-ktx = { module = "com.android.billingclient:billing-ktx", version.ref = "billingVersion" }
+
+[plugins]
+# Kotlin
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+# Serialization
+serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+# Android
+android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
+android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
+# Compose
+compose = { id = "org.jetbrains.compose", version.ref = "compose" }
+moko-resources = { id = "dev.icerock.mobile.multiplatform-resources", version.ref = "moko-resources" }
+# Dokka
+dokka = { id = "org.jetbrains.dokka", version.ref = "kotlin" }

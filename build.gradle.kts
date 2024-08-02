@@ -7,12 +7,12 @@ buildscript {
 }
 
 plugins {
-    kotlin("jvm").apply(false)
-    kotlin("multiplatform").apply(false)
-    kotlin("android").apply(false)
-    id("com.android.application").apply(false)
-    id("com.android.library").apply(false)
-    id("org.jetbrains.compose").apply(false)
+    alias(libs.plugins.kotlin.jvm).apply(false)
+    alias(libs.plugins.kotlin.multiplatform).apply(false)
+    alias(libs.plugins.kotlin.android).apply(false)
+    alias(libs.plugins.android.application).apply(false)
+    alias(libs.plugins.android.library).apply(false)
+    alias(libs.plugins.compose).apply(false)
 }
 
 allprojects {

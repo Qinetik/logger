@@ -1,19 +1,19 @@
 plugins {
-    id("com.android.application")
-    kotlin("android")
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.android)
 }
 
 dependencies {
     implementation(project(":demo:common"))
-    implementation("androidx.activity:activity-compose:1.7.2")
+    implementation(libs.activity.compose)
 }
 
 android {
     namespace = "com.wakaztahir.android"
-    compileSdk = 33
+    compileSdk = libs.versions.compileSdk.get().toInt()
     defaultConfig {
         applicationId = "com.wakaztahir.android"
-        minSdk = 21
+        minSdk = libs.versions.minSdk.get().toInt()
         versionCode = 1
         versionName = "1.0.0"
     }
